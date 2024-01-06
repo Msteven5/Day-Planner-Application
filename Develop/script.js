@@ -5,11 +5,11 @@ let textInfo = document.querySelectorAll('.description')
 
 $(function () {
   
-  var currentDate = dayjs().format('dddd, MMMM d');
+  let currentDate = dayjs().format('dddd, MMMM d');
   $('#currentDay').text(currentDate);
   
-  var currentHour = 16;
-  var currentMinute = dayjs().format(' : mm');
+  let currentHour = dayjs().format('HH');
+  let currentMinute = dayjs().format(' : mm');
   $('#currentTime').text(currentHour + currentMinute);
 
   for(let i = 9; i <= 17; i++) {
@@ -31,13 +31,13 @@ for(let i = 0; i < textInfo.length;) {
 
 
 for(let i = 0; i < timeSlot.length; i++) {
-  if (parseInt(timeSlot[i].id) === currentHour) {
+  if (parseInt(timeSlot[i].id) === parseInt(currentHour)) {
     timeSlot[i].classList.add("present");
   } else if (
-    parseInt(timeSlot[i].id) > currentHour) {
+    parseInt(timeSlot[i].id) > parseInt(currentHour)) {
       timeSlot[i].classList.add("future");
     } else {
-    parseInt(timeSlot[i].id) < currentHour; {
+    parseInt(timeSlot[i].id) < parseInt(currentHour); {
       timeSlot[i].classList.add("past");
     }
   }
