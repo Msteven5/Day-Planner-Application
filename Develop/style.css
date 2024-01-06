@@ -1,13 +1,16 @@
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Rubik Doodle Shadow', system-ui;
   font-size: 16px;
 }
 
+header {
+  background-color: lightgray;
+}
 textarea {
   background: transparent;
   border: none;
   resize: none;
-  color: #000000;
+  color: white;
   border-left: 1px solid black;
   padding: 10px;
 }
@@ -26,22 +29,23 @@ textarea {
 
 .hour {
   background-color: #ffffff;
-  color: #000000;
+  color: white;
   border-top: 1px dashed #000000;
+  background-color: gray;
 }
 
 .past {
-  background-color: #d3d3d3;
+  background-color: darkolivegreen;
   color: white;
 }
 
 .present {
-  background-color: #ff6961;
+  background-color: rgb(112, 112, 112);
   color: white;
 }
 
 .future {
-  background-color: #77dd77;
+  background-color: navy;
   color: white;
 }
 
