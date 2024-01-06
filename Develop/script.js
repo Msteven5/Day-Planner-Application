@@ -4,21 +4,35 @@
 var currentDate = dayjs().format('dddd, MMMM d')
 $('#currentDay').text(currentDate)
 
-var currentHour = dayjs().format('hh')
+var currentHour = dayjs().format('HH')
 var currentMinute = dayjs().format(' : mm A')
 $('#currentTime').text(currentHour + currentMinute)
 
 
-var divEle = document.querySelectorAll("#hour");
-console.log(divEle)
+// var divEle = document.getElementById("9")
+// console.log(divEle)
 
-console.log(divEle[3])
+let timeSlot = []
+
+for( i = 9; i <= 17; i++) {
+  let times = document.getElementById(i);
+  timeSlot.push(times);
+}
+
+
 $(function () {
- 
- 
+  for( i = 0; i < timeSlot.length;) {
+    if( timeSlot[i] == currentHour) {
+      timeSlot[i].toggleClass("past future")
+    }
+  
+} 
+  
+  
+  
  
  //jquery has .toggleClass to be used later
- 
+ //change hour class tags in html to just numbers and use for loop to compare it to the currentHour
   
   
   
